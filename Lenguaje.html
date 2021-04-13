@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">  
+  <head>    
+    <title>Lenguaje</title>    
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin=" anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head> 
+  <body> 
+      <header>
+        <h1>Operaciones del Lenguaje</h1>
+      </header>
+      <nav >    
+        <ul >
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Alfabeto.html">Alfabeto</a></li>
+            <li><a href="Lenguaje.html">Lenguaje</a></li>
+            <li><a href="Palabra.html">Palabra</a></li>
+        </ul>
+    </nav> 
+    <div class="container">
+      <div class="row ">
+        <div class="col-3 ">
+          <p>Ingresa el lenguaje numero 1</p>
+        </div>
+        <div class="col-7">
+          <div class="input-group mb-3">
+            <input type="text" id="id_lenguaje1"class="form-control" placeholder="Ingresa las palabras del lenguaje separados por un espacio" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col-3 " >
+          <p>Ingresa el lenguaje numero 2</p>
+        </div>
+        <div class="col-7">
+          <div class="input-group mb-3">
+            <input type="text" id="id_lenguaje2" class="form-control" placeholder="Ingresa las palabras del lenguaje separados por un espacio " aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+        </div>
+      </div>
+    
+      <div class="row justify-content-center">
+        <button type="button" onclick="obtenerlenguajes('id_lenguaje1','id_lenguaje2')" class="btnp"><strong><p>Ejecutar</p></strong></button>
+      </div>
+      <hr>
+    
+    <div class="row justify-content-center" >
+        <strong><p>Los lenguajes ingresados son:</p></strong>
+   </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="row justify-content-center">
+          <h5>
+            <script>
+              var vectores_lenguaje = JSON.parse(localStorage.getItem("g_l"));
+              var lenguaje1 = vectores_lenguaje.vector_al1;
+              var lenguaje2 = vectores_lenguaje.vector_al2;
+              console.log(lenguaje1);
+              document.write("L1 = { "+lenguaje1[0]);
+              for(var i=1; i<lenguaje1.length; i++){
+                document.write(", "+lenguaje1[i]);
+              }
+              document.write(" }");
+            </script>
+          </h5>
+        </div>
+      </div>
+      <div class="col-6">
+       <div class="row justify-content-center">
+        <h5>
+          <script>
+            document.write("L2 = { "+lenguaje2[0]);
+            for(var i=1; i<lenguaje2.length; i++){
+              document.write(", "+lenguaje2[i]);
+            }
+            document.write(" }");
+          </script>
+        </h5>
+       </div>
+        
+      </div>
+    </div>
+    <hr>
+    <div class="row justify-content-center">
+        <strong><p>OPERACIONES</p></strong>
+    </div>
+    <div class="row" >
+      <div class="col-3" >
+        <div class="row justify-content-center">
+          <button type="button" onclick="union('g_l')" class="btnp"><p>Unión</p></button>
+        </div>
+      </div>
+      <div class="col-3" >
+        <div class="row justify-content-center">
+          <button type="button" onclick="diferencia('g_l')" class="btnp"><p>Diferencia</p></button>
+        </div>
+      </div>
+      <div class="col-3" >
+        <div class="row justify-content-center">
+          <button type="button" onclick="interseccion('g_l')" class="btnp"><p>Intersección</p></button>
+        </div>
+      </div>
+      <div class="col-3" >
+        <div class="row justify-content-center">
+          <button type="button" onclick="Concatenar('g_l')" class="btnp"><p>Concatenar</p></button>
+        </div>
+      </div>
+      </div>
+    </br>
+      <div class="row">
+      <div class="col-3" >
+        <div class="row justify-content-center">
+          <button type="button" onclick="potencia('g_l')" class="btnp"><p>Potencia</p></button>
+        </div>
+      </div>
+      <div class="col-3" >
+        <div class="row justify-content-center">
+          <button type="button" onclick="inversa('g_l')" class="btnp"><p>Inversa</p></button>
+        </div>
+      </div>
+      <div class="col-3" >
+        <div class="row justify-content-center">
+          <button type="button" onclick="cardinalidad('g_l')" class="btnp"><p>Cardinalidad</p></button>
+        </div>
+      </div>
+    </div>
+    </div>
+    </br>
+    
+  </body>
+  <footer class="Ppag"> <strong><p>Copyrigth © 2021</p></strong> </footer>
+
+  
+  <!-- CSS only -->
+
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> 
+<script src="js/funtions.js"type="text/javascript"></script> 
+</html>

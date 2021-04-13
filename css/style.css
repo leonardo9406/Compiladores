@@ -1,0 +1,89 @@
+body{
+background-color:#e9e9e9;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    background: cyan;
+    padding-top: 20px;
+    text-align: center;
+}
+div a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+.btnp{
+      border-radius: 10%;
+      background-color: #e9e9e9;
+      width: auto;
+      height: 35px;
+  }
+.inicial{
+    border-radius: 10%;
+    background-color: #e9e9e9;
+  }
+  button a:hover {
+    color:blue;
+  }
+  button p:hover {
+    color:blue;
+  }
+  legend{
+      text-align: center;
+  }
+  footer {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background: cyan;
+    padding-top: 8px;
+    text-align: center;
+}
+
+.Ppag{
+  position: absolute;
+    width: 100%;
+    height: 40px;
+    background: cyan;
+    padding-top: 8px;
+    text-align: center;
+    bottom: 0;
+}
+nav {
+  background: transparent;
+  margin-bottom: 20px;
+  border-color: black;
+}
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  padding-inline-start: 0px;
+}
+
+li {
+  float: left;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: bold;
+  font-size: 17px;
+  width: 25%;
+  text-align: center;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* cambia el color del item cuando el puntero
+ se posa sobre el*/
+li a:hover {
+  background-color: blue;
+  color: white;
+}
